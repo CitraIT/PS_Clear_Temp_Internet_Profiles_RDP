@@ -1,6 +1,6 @@
 <#
-# CITRA IT - EXCELÊNCIA EM TI
-# SCRIPT PARA REMOVER PERFIS DE USUÁRIOS DOS BROWSERS COMUNS (IE, FIREFOX, CHROME E EDGE) 
+# CITRA IT - EXCELÃŠNCIA EM TI
+# SCRIPT PARA REMOVER PERFIS DE USUÃRIOS DOS BROWSERS COMUNS (IE, FIREFOX, CHROME E EDGE) 
 # 	UTIL EM SERVIDORES RDP.
 # AUTOR: luciano@citrait.com.br
 # DATA: 10/01/2021
@@ -22,7 +22,7 @@ $users = Get-ChildItem -Path C:\Users
 Write-Host "Cleaning $user temporary internet files..."
 ForEach($user in $users)
 {
-	# Internet Explorer Cache
+    # Internet Explorer Cache
     get-childitem -path "C:\Users\$user\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.MSO" | remove-item -Recurse -force -EA SilentlyContinue -Confirm:$False
     get-childitem -path "C:\Users\$user\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5" | remove-item -Recurse -force -EA SilentlyContinue -Confirm:$False
     
